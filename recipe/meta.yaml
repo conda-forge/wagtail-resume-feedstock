@@ -1,5 +1,5 @@
 {% set name = "wagtail-resume" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail_resume-{{ version }}.tar.gz
-  sha256: 8bfaeaf407562b6735691284b0260308639093ab86f79db229ae1c9cb93bcc27
+  sha256: 8ff6e3490d80d4c2c8da9d016da0effc1e5d110298f8703b09b086ea357c5bcc
 
 build:
   noarch: python
