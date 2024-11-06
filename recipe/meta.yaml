@@ -1,5 +1,5 @@
 {% set name = "wagtail-resume" %}
-{% set version = "2.8.0" %}
+{% set version = "2.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail_resume-{{ version }}.tar.gz
-  sha256: 34fd0aa45811ffac7c4537cbe0d3bc30492bf078b08bfe86edfb0ab2a79a3ee2
+  sha256: 14f1a0f00f951e8fbc0143b21714f1c9e421a26924a72949172f5760760519d2
 
 build:
   noarch: python
@@ -21,11 +21,11 @@ requirements:
     - pip
   run:
     - python >=3.8,<4.0.0
-    - django >=3.2.0
-    - wagtail >=4.0.0
-    - wagtail-markdown >=0.10.0
-    - wagtail-metadata >=4.0.0
-    - weasyprint >=59.0.0
+    - django >=3.2.0,<4.0.0
+    - wagtail >=4.0.0,<5.0.0
+    - wagtail-markdown >=0.10.0,<0.11.0
+    - wagtail-metadata >=4.0.0,<5.0.0
+    - weasyprint >=59.0.0,<60.0.0
 
 test:
   imports:
