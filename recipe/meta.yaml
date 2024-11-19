@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail_resume-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtail_resume-{{ version }}.tar.gz
   sha256: e5015a311a2c5d9d8d975871c09d7b0551937c386f7e07d63e72ff3c017e4485
 
 build:
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.8,<4.0.0
+    - python >={{ python_min }}
     - django >=3.2.0
     - wagtail >=4.0.0
     - wagtail-markdown >=0.10.0
@@ -33,6 +33,7 @@ test:
   #commands:
     #- pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
