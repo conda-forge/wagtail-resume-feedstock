@@ -30,7 +30,7 @@ requirements:
     - wagtail >=4.0.0,<8.0.0
     - wagtail-markdown >=0.10.0,<0.14.0
     - wagtail-metadata >=4.0.0,<6.0.0
-    - weasyprint >=59.0.0,<62.0.0
+    - weasyprint >=63.0,<66.0
 
 tests:
   - python:
