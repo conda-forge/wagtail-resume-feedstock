@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: wagtail-resume
-  version: "2.10.2"
+  version: "2.12.0"
   python_min: '3.10'
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/wagtail_resume-${{ version }}.tar.gz
-  sha256: d29db439d5be4e63459a4410d91c9e1c0cc3b302b4aa30648eb030dc5dc813ea
+  sha256: a406085793d51cabec5b68ccffe893ac13961d64e497b95bc4f4b33cbbaa9144
 
 build:
   number: 0
