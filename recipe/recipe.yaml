@@ -3,8 +3,7 @@ schema_version: 1
 
 context:
   name: wagtail-resume
-  version: "2.10.2"
-  python_min: '3.10'
+  version: "2.12.0"
 
 package:
   name: ${{ name|lower }}
@@ -12,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/wagtail_resume-${{ version }}.tar.gz
-  sha256: d29db439d5be4e63459a4410d91c9e1c0cc3b302b4aa30648eb030dc5dc813ea
+  sha256: a406085793d51cabec5b68ccffe893ac13961d64e497b95bc4f4b33cbbaa9144
 
 build:
   number: 0
@@ -26,21 +25,19 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0
-    - django >=3.2.0,<6.0.0
+    - django >=4.0.0,<7.0.0
     - wagtail >=4.0.0,<8.0.0
     - wagtail-markdown >=0.10.0,<0.14.0
     - wagtail-metadata >=4.0.0,<6.0.0
-    - weasyprint >=63.0,<66.0
+    - weasyprint >=63.0.0,<68.0.0
+    - pymdown-extensions >=10.0.0,<12.0.0
 
 tests:
   - python:
       imports:
         - wagtail_resume
-  - requirements:
-      run:
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   summary: A Wagtail project made to simplify creation of resumes for developers.
